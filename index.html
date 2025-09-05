@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Armazém Campo & Cidade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="ras.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+    <div class="accessibility-bar">
+        <button id="theme-toggle" aria-label="Alternar tema">
+            <i class="fas fa-moon"></i> Tema
+        </button>
+        <button id="font-increase" aria-label="Aumentar fonte">A+</button>
+        <button id="font-decrease" aria-label="Diminuir fonte">A-</button>
+        <button id="high-contrast" aria-label="Alto contraste">
+            <i class="fas fa-adjust"></i> Contraste
+        </button>
+    </div>
+    
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span class="logo-text">Prompt Armazém Campo & Cidade</span>
+            </div>
+            <div class="controls">
+                <div class="control-btn close" onclick="alert('Você pode fechar esta janela normalmente com o botão do navegador')"></div>
+                <div class="control-btn minimize" onclick="minimizeTerminal()"></div>
+                <div class="control-btn maximize" onclick="maximizeTerminal()"></div>
+            </div>
+        </div>
+        
+        <div class="content" id="content">
+            <div class="welcome-message">
+                <h2>Prompt de Produtos Agrícolas</h2>
+                <p>Bem-vindo ao sistema de conexão direta com pequenos produtores locais!</p>
+                <p>Digite <span class="success">'help'</span> para ver os comandos disponíveis.</p>
+            </div>
+            
+            <div class="product-highlight">
+                <div class="product-card">
+                    <i class="fas fa-apple-alt product-icon"></i>
+                    <div class="product-name">Frutas Frescas</div>
+                </div>
+                <div class="product-card">
+                    <i class="fas fa-carrot product-icon"></i>
+                    <div class="product-name">Legumes</div>
+                </div>
+                <div class="product-card">
+                    <i class="fas fa-leaf product-icon"></i>
+                    <div class="product-name">Verduras</div>
+                </div>
+                <div class="product-card">
+                    <i class="fas fa-seedling product-icon"></i>
+                    <div class="product-name">Produtos Artesanais</div>
+                </div>
+            </div>
+            
+            <div id="command-history"></div>
+        </div>
+        
+        <div class="terminal">
+            <div class="prompt">
+                <span class="prompt-text">user@feiradigital:~$</span>
+                <input type="text" class="command-input" id="command-input" autofocus aria-label="Digite seu comando">
+            </div>
+            <div id="command-output"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
